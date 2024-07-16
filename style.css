@@ -330,3 +330,27 @@ h6 {
   object-fit: cover;
   width: 100%;
 }
+
+.block-about__container {
+  display: flex;
+  justify-content: center;
+  gap: 120px;
+  padding: 80px 175px 100px;
+}
+.block-about__content {
+  max-width: 430px;
+  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.block-about__title {
+  max-width: 370px;
+}
+.block-about__subtitle {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 160%;
+  color: var(--color-dark-xl);
+}
