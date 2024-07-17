@@ -1,0 +1,179 @@
+.contact {
+    margin-top: 97px;
+    padding-bottom: 30px;
+
+    @media (max-width: calc($tablet - 1px)) {
+        margin-top: 96px;
+    }
+
+    // .contact__container
+    &__container {
+    }
+
+    // .contact__content
+    &__content {
+        border-radius: 40px;
+        background: var(--background-container, #665f55);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+        padding: 100px;
+
+        padding-left: clamp(60px, 8vw, 100px);
+        padding-right: clamp(60px, 8vw, 100px);
+
+        @media (max-width: em(991)) {
+            flex-direction: column;
+            align-items: flex-start;
+            padding-bottom: 95px;
+        }
+
+        @media (max-width: calc($tablet - 1px)) {
+            padding-left: clamp(16px, 4vw, 60px);
+            padding-right: clamp(16px, 4vw, 60px);
+            padding-top: clamp(60px, 4vw, 100px);
+            padding-bottom: clamp(55px, 4vw, 100px);
+
+            row-gap: clamp(40px, calc(10px + 2vw), 100px);
+        }
+    }
+
+    // .contact__offer
+    &__offer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 40px;
+        flex: 1 0;
+    }
+
+    // .contact__header
+    &__header {
+        margin: 0;
+        color: var(--text-light, #e1d4c9);
+    }
+
+    // .contact__header-span
+    &__header-span {
+        color: var(--text-accent, #b0907a);
+        display: inline;
+    }
+
+    // .contact__socials
+    &__socials {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+    // .contact__social
+    &__social {
+        display: flex;
+        width: 58px;
+        height: 58px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100px;
+        border: 1px solid var(--border-light, #c1b6ad);
+        transition: all 0.3s ease-in-out;
+
+        svg > * {
+            stroke: #e1d4c9;
+            transition: stroke 0.3s ease-in-out;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                background: var(--background-body, #e1d4c9);
+
+                svg > * {
+                    stroke: #403f3d;
+                }
+            }
+        }
+    }
+
+    // .contact__info
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 40px;
+        flex: 1 0;
+    }
+
+    // .contact__info-header
+    &__info-header {
+        color: var(--text-light, #e1d4c9);
+        margin: 0;
+    }
+
+    // .contact__contacts
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 20px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            padding-bottom: 2px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s ease-in-out;
+
+            &::after {
+                content: "";
+                width: 0;
+                height: 2px;
+                background: var(--border-light);
+                display: block;
+                opacity: 0;
+                transition: all 0.3s ease-in-out;
+                margin: 0 auto;
+                transform: translateY(2px);
+            }
+
+            @media (any-hover: hover) {
+                &:hover {
+                    &::after {
+                        width: 100%;
+                        opacity: 1;
+                    }
+                    &:nth-child(3)::after {
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    // .contact__item-contact
+    &__item-contact {
+        text-decoration: none;
+        color: var(--text-light, #e1d4c9);
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 8px;
+
+        &_tel {
+            transform: translateY(-3px);
+        }
+        &_time {
+            transform: translateY(-3px);
+            @media (max-width: em(991)) {
+                transform: translateY(-5px);
+            }
+        }
+    }
+
+    // .contact__item-text
+    &__item-text {
+    }
+}
