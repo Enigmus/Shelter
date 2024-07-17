@@ -12,23 +12,27 @@
       <!-- блок Header-->
       <header class="header">
         <div class="header__container">
-          <a href="#!" class="header__logo logo">
+          <a href="#no-scroll" class="header__logo logo">
             <span class="logo__title">Cozy House</span>
             <span class="logo__subtitle">Shelter for pets in Boston</span>
           </a>
           <nav class="header__navigation">
             <ul class="navigation">
               <li class="navigation__item navigation__item_active">
-                <a href="#" class="navigation__link">About the shelter</a>
+                <a href="#no-scroll" class="navigation__link"
+                  >About the shelter</a
+                >
               </li>
               <li class="navigation__item">
-                <a href="#" class="navigation__link">Our pets</a>
+                <a href="#no-scroll" class="navigation__link">Our pets</a>
               </li>
               <li class="navigation__item">
-                <a href="#" class="navigation__link">Help the shelter</a>
+                <a href="#no-scroll" class="navigation__link"
+                  >Help the shelter</a
+                >
               </li>
               <li class="navigation__item">
-                <a href="#" class="navigation__link">Contacts</a>
+                <a href="#no-scroll" class="navigation__link">Contacts</a>
               </li>
             </ul>
           </nav>
@@ -47,7 +51,9 @@
                 extremely wide and open heart. He or she will love you more than
                 anybody else in the world, you will see!
               </p>
-              <a href="#" class="block-only__button button-lnk button-lnk_bg"
+              <a
+                href="#no-scroll"
+                class="block-only__button button-lnk button-lnk_bg"
                 >Make a friend</a
               >
             </div>
@@ -93,44 +99,189 @@
           </div>
         </section>
         <!-- block Pets-->
-        <section class="pets">
-          <div class="pets__container">
-            <h2 class="pets__title heading-2">
-              Our friends who are looking for a house
+        <section class="main__block-pets block-pets">
+          <div class="block-pets__container">
+            <h2 class="block-pets__title heading-2">
+              Our friends who<br />are looking for a house
             </h2>
-            <div class="pets__slider slider">
-              <!-- slide 1-->
-              <div class="slider__slide slide">
-                <div class="slide__img-wrap">
-                  <img src="img/pets-katrine.png" alt="Katrine" />
-                </div>
-                <h3 class="slide__title heading-3">Katrine</h3>
-                <a href="#" class="slide__button button-lnk button-lnk_no-bg"
-                  >Learn more</a
-                >
+            <div class="block-pets__slider slider">
+              <div class="slider__nav-wrapp">
+                <button class="slider__nav-btn slider__nav-btn_prev"></button>
+                <button class="slider__nav-btn slider__nav-btn_next"></button>
               </div>
-              <!-- slide 2-->
-              <div class="slider__slide slide">
-                <div class="slide__img-wrap">
-                  <img src="img/pets-jennifer.png" alt="Jennifer" />
+              <div class="slider__wrapp">
+                <!-- slide 1-->
+                <div class="slider__slide slide">
+                  <div class="slide__img-wrap">
+                    <img src="img/pets-katrine.png" alt="Katrine" />
+                  </div>
+                  <h3 class="slide__title heading-3">Katrine</h3>
+                  <a
+                    href="#no-scroll"
+                    class="slide__button button-lnk button-lnk_no-bg"
+                    >Learn more</a
+                  >
                 </div>
-                <h3 class="slide__title heading-3">Jennifer</h3>
-                <a href="#" class="slide__button button-lnk button-lnk_no-bg"
-                  >Learn more</a
-                >
-              </div>
-              <!-- slide 3-->
-              <div class="slider__slide slide">
-                <div class="slide__img-wrap">
-                  <img src="img/pets-woody.png" alt="Woody" />
+                <!-- slide 2-->
+                <div class="slider__slide slide">
+                  <div class="slide__img-wrap">
+                    <img src="img/pets-jennifer.png" alt="Jennifer" />
+                  </div>
+                  <h3 class="slide__title heading-3">Jennifer</h3>
+                  <a
+                    href="#no-scroll"
+                    class="slide__button button-lnk button-lnk_no-bg"
+                    >Learn more</a
+                  >
                 </div>
-                <h3 class="slide__title heading-3">Woody</h3>
-                <a href="#" class="slide__button button-lnk button-lnk_no-bg"
-                  >Learn more</a
-                >
+                <!-- slide 3-->
+                <div class="slider__slide slide">
+                  <div class="slide__img-wrap">
+                    <img src="img/pets-woody.png" alt="Woody" />
+                  </div>
+                  <h3 class="slide__title heading-3">Woody</h3>
+                  <a
+                    href="#no-scroll"
+                    class="slide__button button-lnk button-lnk_no-bg"
+                    >Learn more</a
+                  >
+                </div>
               </div>
             </div>
-            <a href="#" class="pets__button button-lnk">Get to know the rest</a>
+            <a
+              href="#no-scroll"
+              class="block-pets__button button-lnk button-lnk_bg"
+              >Get to know the rest</a
+            >
+          </div>
+        </section>
+        <!-- block help-->
+        <section class="main__block-help block-help">
+          <div class="block-help__container">
+            <h2 class="block-help__title heading-2">
+              How you can help our shelter
+            </h2>
+            <div class="block-help__content help-list">
+              <div class="help-list__item">
+                <div class="help-list__item-wrapp-img">
+                  <img
+                    src="icons/icon-pet-food.svg"
+                    alt="Pet food"
+                    class="help-list__item-img"
+                  />
+                </div>
+                <h3 class="help-list__item-title heading-3">Pet food</h3>
+              </div>
+              <div class="help-list__item">
+                <div class="help-list__item-wrapp-img">
+                  <img
+                    src="icons/icon-transportation.svg"
+                    alt="Transportation"
+                    class="help-list__item-img"
+                  />
+                </div>
+                <h3 class="help-list__item-title heading-3">Transportation</h3>
+              </div>
+              <div class="help-list__item">
+                <div class="help-list__item-wrapp-img">
+                  <img
+                    src="icons/icon-toys.svg"
+                    alt="Toys"
+                    class="help-list__item-img"
+                  />
+                </div>
+                <h3 class="help-list__item-title heading-3">Toys</h3>
+              </div>
+              <div class="help-list__item">
+                <div class="help-list__item-wrapp-img">
+                  <img
+                    src="icons/icon-bowls-and-cups.svg"
+                    alt="Bowls and cups"
+                    class="help-list__item-img"
+                  />
+                </div>
+                <h3 class="help-list__item-title heading-3">Bowls and cups</h3>
+              </div>
+              <div class="help-list__item">
+                <div class="help-list__item-wrapp-img">
+                  <img
+                    src="icons/icon-shampoos.svg"
+                    alt="Shampoos"
+                    class="help-list__item-img"
+                  />
+                </div>
+                <h3 class="help-list__item-title heading-3">Shampoos</h3>
+              </div>
+              <div class="help-list__item">
+                <div class="help-list__item-wrapp-img">
+                  <img
+                    src="icons/icon-vitamins.svg"
+                    alt="Vitamins"
+                    class="help-list__item-img"
+                  />
+                </div>
+                <h3 class="help-list__item-title heading-3">Vitamins</h3>
+              </div>
+              <div class="help-list__item">
+                <div class="help-list__item-wrapp-img">
+                  <img
+                    src="icons/icon-medicines.svg"
+                    alt="Medicines"
+                    class="help-list__item-img"
+                  />
+                </div>
+                <h3 class="help-list__item-title heading-3">Medicines</h3>
+              </div>
+              <div class="help-list__item">
+                <div class="help-list__item-wrapp-img">
+                  <img
+                    src="icons/icon-collars-leashes.svg"
+                    alt="Collars / leashes"
+                    class="help-list__item-img"
+                  />
+                </div>
+                <h3 class="help-list__item-title heading-3">
+                  Collars / leashes
+                </h3>
+              </div>
+              <div class="help-list__item">
+                <div class="help-list__item-wrapp-img">
+                  <img
+                    src="icons/icon-sleeping-area.svg"
+                    alt="Sleeping areas"
+                    class="help-list__item-img"
+                  />
+                </div>
+                <h3 class="help-list__item-title heading-3">Sleeping areas</h3>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--block Donat-->
+        <section class="main__block-donat block-donat">
+          <div class="block-donat__container">
+            <div class="block-donat__wrapp-img">
+              <img
+                src="img/donation-dog.png"
+                alt="donation-dog"
+                class="block-donat__img"
+              />
+            </div>
+            <div class="block-donat__content">
+              <h2 class="block-donat__title heading-2">
+                You can also make a donation
+              </h2>
+              <p class="block-donat__subtitle">
+                Name of the bank / Type of bank account
+              </p>
+              <a class="block-donat__credit-card">8380 2880 8028 8791 7435</a>
+              <p class="block-donat__text">
+                Legal information and lorem ipsum dolor sit amet, consectetur
+                adipiscing elit. Maecenas a ipsum at libero sagittis dignissim
+                sed ac diam. Praesent ultrices maximus tortor et vulputate.
+                Interdum et malesuada fames ac ante ipsum primis in faucibus.
+              </p>
+            </div>
           </div>
         </section>
       </main>
