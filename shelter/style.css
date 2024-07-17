@@ -442,3 +442,32 @@ h6 {
 .slide__button {
   padding: 13px 43px;
 }
+
+.block-help__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 59px;
+  padding: 79px 0 100px;
+}
+.block-help__title {
+  max-width: 310px;
+  text-align: center;
+}
+.block-help__content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 55px;
+  column-gap: 120px;
+  padding: 0 124px 0 127px;
+}
+
+.help-list__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
