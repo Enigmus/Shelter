@@ -372,10 +372,10 @@ h6 {
   color: var(--color-dark-xl);
 }
 
-.pets {
+.block-pets {
   background: var(--color-light-l);
 }
-.pets__container {
+.block-pets__container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -383,7 +383,7 @@ h6 {
   gap: 60px;
   padding: 80px 0 100px;
 }
-.pets__title {
+.block-pets__title {
   max-width: 400px;
   text-align: center;
 }
@@ -411,8 +411,8 @@ h6 {
   width: 52px;
   height: 52px;
   background-repeat: no-repeat;
-  background-image: url("img/arrow.svg");
-  background-color: 0;
+  background-image: url("icons/icon-arrow.svg");
+  background-color: var(--color-light-l);
   transition: all 0.3s ease-in-out;
 }
 .slider__nav-btn_prev {
@@ -424,7 +424,7 @@ h6 {
 }
 @media (any-hover: hover) {
   .slider__nav-btn:hover {
-    background-color: --color-primary-light;
+    background-color: var(--color-primary-light);
     border-color: var(--color-primary-light);
   }
 }
