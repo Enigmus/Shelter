@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="favicon.ico" />
   </head>
+
   <body>
     <div class="wrapper">
       <!-- блок Header-->
@@ -24,15 +25,15 @@
                 >
               </li>
               <li class="navigation__item">
-                <a href="#no-scroll" class="navigation__link">Our pets</a>
+                <a href="pets.html" class="navigation__link">Our pets</a>
               </li>
               <li class="navigation__item">
-                <a href="#no-scroll" class="navigation__link"
+                <a href="#block-help" class="navigation__link"
                   >Help the shelter</a
                 >
               </li>
               <li class="navigation__item">
-                <a href="#no-scroll" class="navigation__link">Contacts</a>
+                <a href="#contact" class="navigation__link">Contacts</a>
               </li>
             </ul>
           </nav>
@@ -52,7 +53,7 @@
                 anybody else in the world, you will see!
               </p>
               <a
-                href="#no-scroll"
+                href="#block-pets"
                 class="block-only__button button-lnk button-lnk_bg"
                 >Make a friend</a
               >
@@ -99,14 +100,16 @@
           </div>
         </section>
         <!-- block Pets-->
-        <section class="main__block-pets block-pets">
+        <section class="main__block-pets block-pets" id="block-pets">
           <div class="block-pets__container">
             <h2 class="block-pets__title heading-2">
               Our friends who<br />are looking for a house
             </h2>
             <div class="block-pets__slider slider">
               <div class="slider__nav-wrapp">
-                <button class="slider__nav-btn slider__nav-btn_prev"></button>
+                <button
+                  class="slider__nav-btn slider__nav-btn_noactive"
+                ></button>
                 <button class="slider__nav-btn slider__nav-btn_next"></button>
               </div>
               <div class="slider__wrapp">
@@ -149,14 +152,14 @@
               </div>
             </div>
             <a
-              href="#no-scroll"
+              href="pets.html"
               class="block-pets__button button-lnk button-lnk_bg"
               >Get to know the rest</a
             >
           </div>
         </section>
         <!-- block help-->
-        <section class="main__block-help block-help">
+        <section class="main__block-help block-help" id="block-help">
           <div class="block-help__container">
             <h2 class="block-help__title heading-2">
               How you can help our shelter
@@ -287,7 +290,7 @@
       </main>
       <footer class="footer">
         <div class="footer__container">
-          <div class="footer__contact">
+          <div class="footer__contact" id="contact">
             <h2 class="footer__contact-title heading-2">
               For&nbsp;questions and suggestions
             </h2>
@@ -304,11 +307,15 @@
             <h2 class="footer__location-title heading-2">
               We are waiting for your visit
             </h2>
-            <a href="#" class="footer__link footer__link_location"
+            <a
+              href="https://www.google.com/maps/search/%D0%911+Central+Street,+Boston/@42.3587735,-71.0635423,14.5z?authuser=0&entry=ttu"
+              target="_blank"
+              class="footer__link footer__link_location"
               >1 Central Street, Boston (entrance from the store)</a
             >
             <a
-              href="#"
+              href="https://www.google.com/maps/search/18+South+Park,+London/@51.4120309,-0.2983257,11z?authuser=0&entry=ttu"
+              target="_blank"
               class="footer__link footer__link_location footer__link_locationc"
               >18 South Park, London</a
             >

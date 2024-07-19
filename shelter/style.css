@@ -108,6 +108,7 @@ html {
   overscroll-behavior: none;
 }
 .wrapper {
+  padding-top: 1px;
   min-height: 100%;
   display: flex;
   flex-direction: column;
@@ -251,16 +252,25 @@ h6 {
   transition: all 0.3s;
 }
 @media (any-hover: hover) {
+  .navigation__item:hover a {
+    color: var(--color-light-s);
+  }
   .navigation__item:hover::after {
     width: 100%;
     left: 0;
     right: auto;
   }
 }
+.navigation__item_active {
+  cursor: default;
+}
 .navigation__item_active::after {
   width: 100%;
   left: 0;
   right: auto;
+}
+.navigation__item_active a {
+  color: var(--color-light-s);
 }
 .navigation__link {
   font-family: var(--second-family);
@@ -268,6 +278,8 @@ h6 {
   font-size: 15px;
   line-height: 160%;
   color: var(--color-dark-s);
+  cursor: inherit;
+  transition: color 0.3s ease-in-out;
 }
 
 .burger {
@@ -314,7 +326,7 @@ h6 {
 
 .block-only {
   background: url("img/noise_transparent@2x.png"), radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%), #211f20;
-  margin-top: -88px;
+  margin-top: -89px;
   padding-top: 179px;
 }
 .block-only__container {
@@ -392,18 +404,20 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 105px;
 }
 .slider__wrapp {
   display: flex;
   flex-direction: row;
   gap: 90px;
-  padding: 0 105px;
+  z-index: 2;
 }
 .slider__nav-wrapp {
   position: absolute;
   display: flex;
   justify-content: space-between;
   width: 100%;
+  margin-left: -105px;
 }
 .slider__nav-btn {
   border-radius: 100px;
@@ -413,17 +427,19 @@ h6 {
   background-repeat: no-repeat;
   background-image: url("icons/icon-arrow.svg");
   background-color: var(--color-light-l);
+  background-position: 50% 50%;
   transition: all 0.3s ease-in-out;
 }
-.slider__nav-btn_prev {
-  background-position: 50% calc(50% - 1px);
+.slider__nav-btn_noactive {
+  border: 2px solid var(--color-dark-s);
+  background-blend-mode: color-burn;
+  cursor: default;
 }
 .slider__nav-btn_next {
   transform: rotate(180deg);
-  background-position: 50% calc(50% + 1px);
 }
 @media (any-hover: hover) {
-  .slider__nav-btn:hover {
+  .slider__nav-btn_prev:hover, .slider__nav-btn_next:hover {
     background-color: var(--color-primary-light);
     border-color: var(--color-primary-light);
   }
@@ -438,9 +454,20 @@ h6 {
   background: var(--color-light-s);
   width: 270px;
   padding-bottom: 30px;
+  transition: all 0.3s ease-in-out;
 }
 .slide__button {
   padding: 13px 43px;
+}
+@media (any-hover: hover) {
+  .slide:hover {
+    cursor: pointer;
+    box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
+  }
+  .slide:hover a {
+    background: var(--color-primary-light);
+    border-color: var(--color-primary-light);
+  }
 }
 
 .block-help__container {
@@ -507,6 +534,7 @@ h6 {
   padding: 10px 15px 10px 60px;
   background: var(--color-primary);
   position: relative;
+  transition: all 0.3s ease-in-out;
 }
 .block-donat__credit-card::before {
   content: "";
@@ -515,6 +543,11 @@ h6 {
   width: 30px;
   height: 23px;
   left: 15px;
+}
+@media (any-hover: hover) {
+  .block-donat__credit-card:hover {
+    background: var(--color-primary-light);
+  }
 }
 .block-donat__text {
   font-family: var(--second-family);
@@ -554,6 +587,7 @@ h6 {
   align-items: center;
   width: 100%;
   gap: 20px;
+  transition: all 0.3s ease-in-out;
 }
 .footer__link::before {
   content: "";
@@ -563,6 +597,7 @@ h6 {
   background-repeat: no-repeat;
   background-position: 0 0;
   margin-top: -2px;
+  transition: all 0.3s ease-in-out;
 }
 .footer__link_mail::before {
   background-image: url("icons/icon-email.svg");
@@ -579,6 +614,14 @@ h6 {
 .footer__link_locationc {
   margin-top: 2px;
   gap: 0;
+}
+@media (any-hover: hover) {
+  .footer__link:hover {
+    color: var(--color-light-s);
+  }
+  .footer__link:hover::before {
+    filter: grayscale(1);
+  }
 }
 .footer__location {
   display: flex;
