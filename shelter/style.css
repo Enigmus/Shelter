@@ -206,6 +206,23 @@ h6 {
   justify-content: space-between;
   align-items: center;
 }
+.header_light {
+  padding: 30px 0;
+  background: var(--color-light-xl);
+}
+.header_light .logo > * {
+  color: var(--color-dark-l);
+}
+.header_light .navigation * {
+  color: var(--color-dark-l);
+}
+.header_light .navigation__item_active a {
+  color: var(--color-dark-3xl);
+}
+.header_light .navigation a:hover {
+  color: var(--color-dark-3xl);
+}
+
 .logo {
   display: flex;
   flex-direction: column;
@@ -635,4 +652,92 @@ h6 {
   max-width: 279px;
   color: var(--color-light-xl);
   margin-left: -2px;
+}
+.pets {
+  padding-top: 80px;
+  padding-bottom: 100px;
+  background: var(--color-light-l);
+}
+.pets__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 45px;
+}
+.pets__title {
+  text-align: center;
+  margin: 2px 0 0 4px;
+}
+.pets__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 40px;
+  grid-row-gap: 30px;
+  padding: 13px 0;
+}
+.pets__pagination {
+  margin-top: 2px;
+}
+
+.pet-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  border-radius: 9px;
+  background: var(--color-light-s);
+  width: 270px;
+  padding-bottom: 30px;
+  transition: all 0.3s ease-in-out;
+}
+.pet-card__button {
+  padding: 13px 43px;
+}
+@media (any-hover: hover) {
+  .pet-card:hover {
+    cursor: pointer;
+    box-shadow: 0 2px 35px 14px rgba(13, 13, 13, 0.04);
+  }
+  .pet-card:hover a {
+    background: var(--color-primary-light);
+    border-color: var(--color-primary-light);
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.pagination__nav-btn {
+  border-radius: 100px;
+  border: 2px solid var(--color-primary);
+  width: 52px;
+  height: 52px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  text-align: center;
+  color: var(--color-dark-3xl);
+  cursor: default;
+  transition: all 0.3s ease-in-out;
+}
+.pagination__nav-btn_noactive {
+  border: 2px solid var(--color-dark-s);
+  color: var(--color-dark-s);
+  background: none;
+}
+.pagination__nav-btn_active {
+  background: var(--color-primary);
+}
+@media (any-hover: hover) {
+  .pagination__nav-btn:not(.pagination__nav-btn_noactive):not(.pagination__nav-btn_active):hover {
+    cursor: pointer;
+    background: var(--color-primary);
+  }
 }
