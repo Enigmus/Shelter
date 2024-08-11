@@ -1055,11 +1055,21 @@ h6 {
   padding-bottom: 100px;
   background: var(--color-light-l);
 }
+@media (max-width: 62.5em) {
+  .pets {
+    padding-bottom: 77px;
+  }
+}
 .pets__container {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 45px;
+}
+@media (max-width: 62.5em) {
+  .pets__container {
+    gap: 15px;
+  }
 }
 .pets__title {
   text-align: center;
@@ -1073,8 +1083,26 @@ h6 {
   grid-row-gap: 30px;
   padding: 13px 0;
 }
+@media (max-width: 62.5em) {
+  .pets__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .pets__grid > :nth-child(n+7) {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .pets__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 .pets__pagination {
   margin-top: 2px;
+}
+@media (max-width: 62.5em) {
+  .pets__pagination {
+    margin-top: 11px;
+  }
 }
 
 .pet-card {
@@ -1085,9 +1113,13 @@ h6 {
   gap: 30px;
   border-radius: 9px;
   background: var(--color-light-s);
-  width: 270px;
+  max-width: 270px;
   padding-bottom: 30px;
   transition: all 0.3s ease-in-out;
+}
+.pet-card__img-wrap img {
+  width: 100%;
+  object-fit: cover;
 }
 .pet-card__button {
   padding: 13px 43px;
