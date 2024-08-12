@@ -1753,6 +1753,12 @@ h6 {
     padding-bottom: 77px;
   }
 }
+@media (max-width: 40em) {
+  .pets {
+    padding-top: 41px;
+    padding-bottom: 42px;
+  }
+}
 .pets__container {
   display: flex;
   flex-direction: column;
@@ -1787,6 +1793,16 @@ h6 {
 @media (max-width: 768px) {
   .pets__grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 28.125em) {
+  .pets__grid {
+    grid-template-columns: repeat(1, 1fr);
+    padding-top: 25px;
+    padding-bottom: 17px;
+  }
+  .pets__grid > :nth-child(n+4) {
+    display: none;
   }
 }
 .pets__pagination {
@@ -1833,6 +1849,11 @@ h6 {
   justify-content: center;
   align-items: center;
   gap: 20px;
+}
+@media (max-width: 28.125em) {
+  .pagination {
+    gap: 10px;
+  }
 }
 .pagination__nav-btn {
   border-radius: 100px;
