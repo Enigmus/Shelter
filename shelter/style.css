@@ -1489,6 +1489,8 @@ h6 {
 @media (max-width: 40em) {
   .block-donat__container {
     padding-top: 45px;
+    gap: 41px;
+    padding-bottom: 42px;
   }
 }
 .block-donat__wrapp-img {
@@ -1498,6 +1500,11 @@ h6 {
   .block-donat__wrapp-img {
     order: 1;
     margin-left: -1px;
+  }
+}
+@media (max-width: 23.75em) {
+  .block-donat__wrapp-img {
+    max-width: 16.25rem;
   }
 }
 .block-donat__img {
@@ -1514,6 +1521,7 @@ h6 {
 @media (max-width: 40em) {
   .block-donat__content {
     align-items: center;
+    gap: 23px;
   }
 }
 .block-donat__title {
@@ -1532,6 +1540,11 @@ h6 {
   letter-spacing: 0.06em;
   color: var(--color-dark-l);
 }
+@media (max-width: 40em) {
+  .block-donat__subtitle {
+    letter-spacing: normal;
+  }
+}
 .block-donat__credit-card {
   cursor: pointer;
   display: block;
@@ -1547,6 +1560,28 @@ h6 {
   position: relative;
   transition: all 0.3s ease-in-out;
 }
+@media (min-width: 48em) {
+  .block-donat__credit-card {
+    font-size: 1.25rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 48em) {
+  @supports (font-size: clamp( 0.9375rem , 0.7142857143rem  +  1.1160714286vw , 1.25rem )) {
+    .block-donat__credit-card {
+      font-size: clamp( 0.9375rem , 0.7142857143rem  +  1.1160714286vw , 1.25rem );
+    }
+  }
+  @supports not (font-size: clamp( 0.9375rem , 0.7142857143rem  +  1.1160714286vw , 1.25rem )) {
+    .block-donat__credit-card {
+      font-size: calc(0.9375rem + 0.3125 * (100vw - 20rem) / 28);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .block-donat__credit-card {
+    font-size: 0.9375rem;
+  }
+}
 .block-donat__credit-card::before {
   content: "";
   position: absolute;
@@ -1560,6 +1595,11 @@ h6 {
     background: var(--color-primary-light);
   }
 }
+@media (max-width: 40em) {
+  .block-donat__credit-card {
+    line-height: 150%;
+  }
+}
 .block-donat__text {
   font-family: var(--second-family);
   font-style: italic;
@@ -1567,6 +1607,12 @@ h6 {
   font-size: 12px;
   line-height: 150%;
   color: var(--color-dark-m);
+}
+@media (max-width: 40em) {
+  .block-donat__text {
+    text-align: justify;
+    padding: 0 10px;
+  }
 }
 
 .footer {
@@ -1584,6 +1630,11 @@ h6 {
     column-gap: 60px;
     padding-top: 14px;
     row-gap: 65px;
+  }
+}
+@media (max-width: 40em) {
+  .footer__container {
+    row-gap: 22px;
   }
 }
 .footer__contact {
@@ -1622,18 +1673,38 @@ h6 {
 .footer__link_mail::before {
   background-image: url("icons/icon-email.svg");
 }
+@media (max-width: 40em) {
+  .footer__link_mail {
+    margin-left: 13px;
+  }
+}
 .footer__link_tel {
   margin-top: 2px;
 }
 .footer__link_tel::before {
   background-image: url("icons/icon-phone.svg");
 }
+@media (max-width: 40em) {
+  .footer__link_tel {
+    margin-left: 19px;
+  }
+}
 .footer__link_location::before {
   background-image: url("icons/icon-marker.svg");
+}
+@media (max-width: 40em) {
+  .footer__link_location {
+    margin-top: 10px;
+  }
 }
 .footer__link_locationc {
   margin-top: 2px;
   gap: 0;
+}
+@media (max-width: 40em) {
+  .footer__link_locationc {
+    margin-top: 6px;
+  }
 }
 @media (any-hover: hover) {
   .footer__link:hover {
@@ -1656,6 +1727,22 @@ h6 {
   color: var(--color-light-xl);
   margin-left: -2px;
 }
+@media (max-width: 40em) {
+  .footer__location-title {
+    margin-left: 9px;
+  }
+}
+.footer__img-wrapp img {
+  width: 100%;
+  object-fit: cover;
+}
+@media (max-width: 23.75em) {
+  .footer__img-wrapp {
+    margin-top: 20px;
+    max-width: 260px;
+  }
+}
+
 .pets {
   padding-top: 80px;
   padding-bottom: 100px;
