@@ -1517,6 +1517,9 @@ h6 {
   }
 }
 
+.block-donat {
+  background: var(--color-light-l);
+}
 .block-donat__container {
   padding-top: 80px;
   padding-bottom: 99px;
